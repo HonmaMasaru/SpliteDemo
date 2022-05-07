@@ -17,7 +17,7 @@ final class GameViewController: UIViewController {
     }
 
     override func viewDidLayoutSubviews() {
-        gameScene = SKScene(fileNamed: "GameScene") as? GameScene
+        gameScene = GameScene(size: view.frame.size)
         gameView.presentScene(gameScene)
         gameView.showsFPS = true
         gameView.showsNodeCount = true
